@@ -1,11 +1,9 @@
-# test code
-import random
+def print_matrix(n, width=1):
+    matrix = [[1] * n for _ in range(n)]
+    for r in range(n):
+        for c in range(n):
+            print(str(matrix[r][c]).ljust(width), end=' ')
+        print()
 
 
-def lst_calc(values):
-    res_lst = [random.randrange(1, 10) for _ in range(values)]
-    print(f'List: {res_lst}')
-    print(f'Sum: {sum(res_lst)}')
-    print(f'Length: {len(res_lst)}')
-
-lst_calc(int(input(f'Enter number: ')))
+print_matrix(6)
